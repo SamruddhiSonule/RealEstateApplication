@@ -1,0 +1,336 @@
+<div class="main-container">
+
+    <app-home></app-home>
+
+<div class="main-box" *ngIf="!selectedPG">
+  <!-- images       -->
+    <div class="images" >
+            <div class="img1" *ngFor="let i of selectedProperty?.propertyImages">
+                <img [src]="'data:image;base64,' + i.image" alt="">
+            </div>
+           
+        </div>
+<!-- details -->
+        <div class="details">
+           <!-- row1  -->
+            <div class="roww1">
+<div class="box1">
+    
+    <div class="row1">
+        <div class="tags">
+            <small class="tagN">Price:</small>
+            &nbsp;<small class="tagB">{{formatPrice(selectedProperty.price)}}</small>
+        </div>
+        <div class="tags">
+            <small class="tagN">FlatBHK</small>
+            &nbsp; <small class="tagB">{{selectedProperty.flatBHK}}</small>
+        </div>
+    </div>   
+    <div class="row1">
+        <div class="tags">
+            <small class="tagN">Balcony:</small>
+            &nbsp;<small class="tagB">{{selectedProperty.balcony}}</small>
+        </div>
+        <div class="tags">
+            <small class="tagN">Parking</small>
+            &nbsp; <small class="tagB">{{selectedProperty.parking}}</small>
+        </div>
+    </div>    
+</div>
+               <div class="box1">
+                        <div class="row1">
+                            <div class="tags">
+                                <small class="tagN">Property TYPE:</small>
+                                &nbsp;<small class="tagB">{{selectedProperty.propertyTYPE}}</small>
+                            </div>
+                            <div class="tags">
+                                <small class="tagN">Carpet Area</small>
+                                &nbsp; <small class="tagB">{{selectedProperty.carpetArea}}&nbsp;sq.ft.</small>
+                            </div>
+                        </div>    
+                        <div class="row1">
+                            <div class="tags">
+                                <small class="tagN">Property Locality</small>
+                                &nbsp; <small class="tagB">{{selectedProperty.propertyLocality}}</small>
+                            </div>
+                            <div class="tags">
+                                <small class="tagN">Facing:</small>
+                                &nbsp;<small class="tagB">{{selectedProperty.facing}}</small>
+                            </div>
+
+                        </div>
+               </div>
+        <div class="box1">
+                <div class="row1">
+                    <div class="tags">
+                        <small class="tagN">Construction Phase</small>
+                        &nbsp; <small class="tagB">{{selectedProperty.constructionPhase}}</small>
+                    </div>
+                    <div class="tags">
+                        <small class="tagN">Furnishing:</small>
+                        &nbsp;<small class="tagB">{{selectedProperty.furnishing}}</small>
+                    </div>
+                </div>    
+                <div class="row1">
+                    <div class="tags">
+                        <small class="tagN">Number Of Bathroom:</small>
+                        &nbsp;<small class="tagB">{{selectedProperty.numberOfBathroom}}</small>
+                    </div>
+                    <div class="tags">
+                        <small class="tagN">forSaleOrRentString</small>
+                        &nbsp; <small class="tagB">{{selectedProperty.forSaleOrRentString}}</small>
+                    </div>
+                </div>
+       </div>
+       <div class="box1">
+                    <div class="row1">
+                        <div class="tags">
+                            <small class="tagN">Society Name</small>
+                            &nbsp; <small class="tagB">{{selectedProperty.societyName}}</small>
+                        </div>
+                        <div class="tags">
+                            <small class="tagN">Agent Name</small>
+                            &nbsp; <small class="tagB">{{userDetails?.userAgentName}}</small>
+                        </div>
+                    </div>    
+                    
+                </div>
+                
+                <!-- row2 -->
+            </div>
+            <div class="details-others">
+                <div class="roww3">
+                    <div class="row3">
+                        <div class="tags">
+                            <small class="tagN">Property Name:</small>
+                            &nbsp;<small class="tagB">{{selectedProperty.propertyRBName}}</small>
+                        </div>
+                        <div class="tags">
+                            <small class="tagN">Locations:</small>
+                            &nbsp;<small class="tagB">{{selectedProperty.location}}</small>
+                        </div>
+                        <div class="tags">
+                            <small class="tagN">Amenities:</small>
+                            &nbsp; <small class="tagB">{{selectedProperty.amenities}}</small>
+                        </div>
+                        <div class="tags">
+                            <small class="tagN">Description:</small>
+                            &nbsp; <small class="tagB">{{selectedProperty.description}}</small>
+                        </div>
+                    </div> 
+                   
+                </div>
+                <div class="contacts">
+                    <div class="contac-user">
+                        <button class="btn comparisonBTN" (click)="onCreateEnquiry('RB',null)">Create Enquiry.</button>
+                        &nbsp;
+                        <button class="btn comparisonBTN" (click)="compareProperty()">Compare Property</button>
+                        &nbsp;
+                        <button class="btn contact" (click)="openContactPop()">Get Contact Info. </button>
+                    </div>
+               </div>
+               
+            </div>
+            </div>
+        </div>
+<div class="main-box" *ngIf="selectedPG">
+            <!-- images       -->
+              <!-- <div class="images" >
+                      <div class="img1" *ngFor="let i of propertyPG">
+                          <img [src]="'data:image;base64,' + i.image" alt="">
+                      </div>
+                     
+                  </div> -->
+          <!-- details -->
+                  <div class="detailss">
+                     <!-- row1  -->
+                      <div class="roww1">
+          <div class="box1">
+              
+              <div class="row1">
+                  <div class="tags">
+                      <small class="tagN">Property PG Name:</small>
+                      &nbsp;<small class="tagB">{{propertyPG.propertyPGName}}</small>
+                  </div>
+                  <div class="tags">
+                      <small class="tagN">Deposite Amount:</small>
+                      &nbsp; <small class="tagB">{{propertyPG.depositeAmmount}}</small>
+                  </div>
+              </div>   
+              <div class="row1">
+                  <div class="tags">
+                      <small class="tagN">Notice Period:</small>
+                      &nbsp;<small class="tagB">{{propertyPG.noticePeriod}}</small>
+                  </div>
+                  <div class="tags">
+                      <small class="tagN">Food Availability:</small>
+                      &nbsp; <small class="tagB">{{propertyPG.foodAvailability}}</small>
+                  </div>
+              </div>    
+          </div>
+                         <div class="box1">
+                                  <div class="row1">
+                                      <div class="tags">
+                                          <small class="tagN">AC Rooms Availability:</small>
+                                          &nbsp;<small class="tagB">{{propertyPG.acRoomsAvailability}}</small>
+                                      </div>
+                                      <div class="tags">
+                                          <small class="tagN">Parking:</small>
+                                          &nbsp; <small class="tagB">{{propertyPG.parking}}</small>
+                                      </div>
+                                  </div>    
+                                  <div class="row1">
+                                      <div class="tags">
+                                          <small class="tagN">PG Locality</small>
+                                          &nbsp; <small class="tagB">{{propertyPG.locality}}</small>
+                                      </div>
+                                      <div class="tags">
+                                          <small class="tagN">Location:</small>
+                                          &nbsp;<small class="tagB">{{propertyPG.location}}</small>
+                                      </div>
+          
+                                  </div>
+                         </div>
+                  <div class="box1">
+                          <div class="row1">
+                              <div class="tags">
+                                  <small class="tagN">One Person Rent</small>
+                                  &nbsp; <small class="tagB">{{propertyPG.onePersonRent}}</small>
+                              </div>
+                              <div class="tags">
+                                  <small class="tagN">Power Backup:</small>
+                                  &nbsp;<small class="tagB">{{propertyPG.powerBackup}}</small>
+                              </div>
+                          </div>    
+                          <div class="row1">
+                              <div class="tags">
+                                  <small class="tagN">Available For:</small>
+                                  &nbsp;<small class="tagB">{{propertyPG.availableFor}}</small>
+                              </div>
+                              <div class="tags">
+                                <small class="tagN">Agent Name:</small>
+                                &nbsp;<small class="tagB">{{userDetails?.userAgentName}}</small>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      
+                 </div>
+                 
+                 <div class="row1">
+                    
+                          <!-- row2 -->
+                      </div>
+                      <div class="details-otherss">
+                          <div class="roww3">
+                              
+                             
+                          </div>
+                          <div class="contacts">
+                              <div class="contac-user">
+                                  
+                                  &nbsp;
+                                  <button class="btn contact" (click)="openContactPop()">Get Contact Info. Of Agent </button>
+                              </div>
+                         </div>
+                         
+                      </div>
+                      </div>
+                   <div class="rooms">
+               <div class="filtersSharingRooms">
+                    <form [formGroup]="filtersSR">
+                        <div class="filterss">
+                            <div class="btn1">
+                                <small class="filter-tag">Filters</small>
+                            </div>
+                            <div class="btn2">
+                                <small class="tagss">Sharing Bed+</small>&nbsp;
+                                                        <select class="deals-type" 
+                                                        formControlName="sharing" >
+                                                        <Option value="null">none</Option>
+                                                        <Option value="One">Single Bed</Option>
+                                                        <Option value="Two">Double Bed</Option>
+                                                        <Option value="Three">Three Bed</Option>
+                                                        <Option value="Four">Four Bed</Option>
+                                                          </select>
+                            </div>
+                            <div class="btn2">
+                                <small class="tagss">Available For+</small>&nbsp;
+                                                        <select class="deals-type" 
+                                                        formControlName="availableFor" >
+                                                        <Option value="null">none</Option>
+                                                        <Option value="One">Boys</Option>
+                                                        <Option value="Two">Girls</Option>
+                                                        </select>
+                            </div>
+                            <div class="btn2">
+                                <button class="btn btn-s" (click)="onSearchFiltersPG()">Search</button>
+                            </div>
+                        </div>
+                    </form>
+               </div>     
+                    <button class="btn prop-btn" *ngFor="let p of sharingRooms">
+                        <div class="main-box-botn" >
+                            <div class="imagess" >
+                                    <img [src]="'data:image;base64,'+p.propertyImages[currentImageIndex]?.image" alt="image">
+                            </div>
+                            <div class="main-data-price">
+                                <div class="data">
+                                        <div class="name">
+                                            <div class="cont">
+                                                   <div class="nmDiv">
+                                                    <small class="nm">Room No.{{p.roomNo}} </small> 
+                                                   </div>
+                                                 <!-- <div>
+                                                    <a class="favorite" #fav (click)="onFavorite()"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                                 </div> -->
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="societNM">
+                                            <small class="society">{{propertyPG.propertyPGName}}</small> 
+                                        </div>
+                                        <div class="dataC">
+                                            <div class="detailse">
+                                                    <div class="first-row">
+                                                        <div class="area">
+                                                            <small id="label">SHARING: <small id="value">&nbsp;{{p.sharing}} Bed</small></small>
+                                                        </div>
+                                                        
+                                                        <div class="area">
+                                                            <small id="label">AVAILABLE FOR: <small id="value">&nbsp;{{p.availableFor}}</small></small>
+                                                        </div>
+                                                     
+                                                    </div>
+                                                    <div class="first-row">
+                                                        <div class="area">
+                                                            <small id="label">AMENITIES: <small id="value">&nbsp;{{p.amenities}}</small></small>
+                                                        </div>
+                                                        
+                                                        <div class="area">
+                                                            <small id="label">FOOD AVAILABILITY:<small id="value">&nbsp;{{p.foodAvailability}}</small></small>
+                                                        </div>
+                                                       
+                                                    </div>
+                                            </div>
+                                             
+                                        </div>
+                                </div>
+                                <div class="price">
+                                    <div class="priceRS">
+                                        <button class="btn buttonPrice" (click)="onCreateEnquiry('PG',p.roomNo)">Make Enquiry</button>
+                                    </div>
+                                    
+                                    <div class="priceRS">
+                                        <small class="rs">&#x20B9; {{formatPrice(p.rent)}}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </button>
+                   </div>   
+        </div>
+
+        
+</div>

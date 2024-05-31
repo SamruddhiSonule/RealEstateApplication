@@ -1,0 +1,19 @@
+.form-container{
+
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 100%;
+    margin-left: 50px;
+    width: 1460px;
+
+}
+.line{
+    height: 0.5px;
+    width: 1400px;
+    background-color: rgb(172, 168, 168);
+    margin-top: 740px;
+    margin-left: 20px;
+}
+.box{
+    display: flex;
+}

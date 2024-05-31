@@ -1,0 +1,51 @@
+.popup-contact{
+    background-color: aliceblue;
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    margin: auto;
+    border-radius: 10px;
+    border: 0.5px solid;
+    border-color: bisque;
+}
+.btnn{
+    margin: auto;
+    justify-content: center; /* Center horizontally */
+    margin-top: 20px; /* Adjust top margin as needed */
+}
+.closeBTN{
+    background-color: rgb(255, 251, 41);
+    border: 0.5px solid;
+    border-color: rgb(223, 212, 198);
+}
+.details{
+    margin: auto;
+    display: flex;
+    
+   
+    flex-direction: column;
+}
+.tag1{
+    font-weight: 400;
+    font-size: 17px;
+  
+}
+.tag2{
+    font-weight: 500;
+    font-size: 18px;
+}
+.form-input{
+    width: 400px;
+    height: 200px;
+}
+.submit-tt{
+
+}
+.submit{
+background-color: rgb(255, 255, 255);
+border: 0.5px solid;
+border-color: yellow;
+}

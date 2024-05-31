@@ -1,0 +1,87 @@
+.line{
+    background-color: rgb(194, 191, 191);
+    height: 1px;
+    margin: auto;
+    margin-top: 30px;
+    width: 80%;
+}
+.line1{
+    background-color: rgb(194, 191, 191);
+    height: 1px;
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+}
+.container{
+    background-color: aliceblue;
+    height: 400px;
+    width: 700px;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(216, 211, 211);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.signup{
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    width: 400px;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.signup_link{
+    color: rgb(88, 88, 134);
+    text-decoration: none;
+    cursor: pointer;
+}
+.form-control{
+    width: 500px;
+
+}
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 90px;
+    margin-top: 40px;
+
+}
+.bton_login{
+    
+    width: 500px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.login_btn{
+    background-color: #FCDC2A;
+    
+}
+
+.show-link{
+   
+    text-decoration: none;
+    color: rgb(146, 143, 143);
+    margin-left: 10px ;
+    cursor: pointer;
+    
+}
+.password{
+    display: flex;
+    align-items: center;
+}
+.pass{
+    width: 450px;
+}
+.error{
+  
+    height: 20px;
+}
+.errorMSG{
+    color: red;
+}

@@ -1,0 +1,62 @@
+.ehead{
+    font-size: 20px;
+}
+.enquiries{ 
+
+}
+.enquiryMsg{
+   
+    background-color: antiquewhite;
+    margin-top: 20px;
+    width: 1000px;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.enquiryMsg:hover{
+    box-shadow: 0 0 10px rgb(255, 234, 117);
+}
+.enqBOx{
+    display: flex;
+    width: 900px;
+    background-color: white;
+    padding: 3px;
+    border-radius: 10px;
+}
+.enqlabel{
+    width: 170px;
+}
+.pending{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(84, 182, 84);
+    
+}
+.closed{
+    background-color: rgb(255, 237, 237);
+    border: 0.5px solid;
+    color: black;
+    border-color: rgb(252, 249, 59);
+}
+.pendingClose{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 39, 39);
+    
+}
+.msg{
+
+    margin-top: 20px;
+    height: 1   00px;
+    width: 200px;
+    padding: 20px;
+}
+.label{
+    font-size: 15px;
+    width: 100px;
+    
+}
+.value{
+    font-size: 16px;
+    font-weight: 400;
+}

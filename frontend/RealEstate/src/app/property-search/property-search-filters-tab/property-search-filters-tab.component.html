@@ -1,0 +1,146 @@
+<div class="main-tab">
+  <div class="rent-buy" *ngIf="showResultsForRentBuy">
+    <form [formGroup]="filters"> 
+        <div class="filters">
+            <div class="btn1">
+                <small class="filter-tag">Filters</small>
+            </div>
+           
+                <div class="btn2">
+                    <small class="tags">Locality+</small>
+                                            <select class="deals-type" 
+                                            formControlName="locality" (change)="onLocalityChange($event)">
+                                            <Option value="null">none</Option>
+                                               <option *ngFor="let t of localitiesInPune" [value]="t">{{t}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    
+                        <small class="tags" >Budget+</small>
+                                            <select class="deals-type"  formControlName="price"(change)="onBudgetChange($event)" *ngIf="!showRent" >
+                                                <Option value=0>none</Option>
+                                               <option *ngFor="let t of budgetBuyOptions" [value]="t.value">{{t.label}}</option>
+                                              </select>
+                 
+                   
+                                            <select class="deals-type"  formControlName="price"(change)="onBudgetChange($event)"  *ngIf="showRent">
+                                                <Option value=0>none</Option>
+                                               <option *ngFor="let t of budgetPGOptions" [value]="t.value">{{t.label}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">Proprty Type+</small>
+                                            <select class="deals-type"  formControlName="propertyType" (change)="onProppertyTypeChange($event)">
+                                                <Option value="null">none</Option>
+                                               <option *ngFor="let t of propertyType" [value]="t">{{t}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">Furnishing+</small>
+                                            <select class="deals-type"  formControlName="furnishing"(change)="onFurnishingChange($event)">
+                                                <Option value="null">none</Option>
+                                               <option *ngFor="let t of furnishing" [value]="t">{{t}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">For Sell Or Rent+</small>
+                                            <select class="deals-type"  formControlName="forSaleOrRentString" (change)="onForROSChange($event)">
+                                                <Option value="null">none</Option>
+                                               <option *ngFor="let t of forSaleOrRentString" [value]="t">{{t}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">Facing+</small>
+                                            <select class="deals-type"  formControlName="facing" (change)="onConstrPhaseChange($event)">
+                                                <Option value="null">none</Option>
+                                               <option *ngFor="let t of facing" [value]="t">{{t}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">Construction Phase+</small>
+                                            <select class="deals-type"  formControlName="constructionPhase" (change)="onFlatBHKChange($event)">
+                                                <Option value="null">none</Option>
+                                               <option *ngFor="let t of constructionPhase" [value]="t">{{t}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">Flat BHK+</small>
+                                            <select class="deals-type"  formControlName="flatBHK" (change)="onBudgetChange($event)">
+                                                 <Option value="null">none</Option>
+                                               <option *ngFor="let t of bhkFlat" [value]="t">{{t}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <button class="btn btn-s" (click)="onSearchFilters()">Search</button>
+                </div>
+       
+        </div>
+    </form>
+  </div>
+
+  <div class="rent-buy" *ngIf="showResultsForPG">
+    <form [formGroup]="filtersPG"> 
+        <div class="filters">
+            <div class="btn1">
+                <small class="filter-tag">Filters</small>
+            </div>
+           
+                <div class="btn2">
+                    <small class="tags">Locality+</small>
+                                            <select class="deals-type" 
+                                            formControlName="locality" (change)="onLocalityChange($event)">
+                                            <Option value="null">none</Option>
+                                               <option *ngFor="let t of localitiesInPune" [value]="t">{{t}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">Budget+</small>
+                                            <select class="deals-type"  formControlName="onePersonRent"(change)="onFacingChange($event)" >
+                                                <Option value=0>none</Option>
+                                               <option *ngFor="let t of budgetPGOptions" [value]="t.value">{{t.label}}</option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">Available for+</small>
+                                            <select class="deals-type"  formControlName="availableFor" (change)="onBudgetChange($event)">
+                                                <Option value="null">none</Option>
+                                                 <Option value="Boys">Boys</Option>
+                                                 <Option value="Girls">Girls</Option>
+                                                 <Option value="Combine">Combine</Option>
+                                             
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">Food-Availablity+</small>
+                                            <select class="deals-type"  formControlName="foodAvailability">
+                                                <Option value="null">none</Option>
+                                               <option value="Yes">Yes</option>
+                                               <Option value="No">No</Option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">AC-Rooms+</small>
+                                            <select class="deals-type"  formControlName="acRoomsAvailability">
+                                                <Option value="null">none</Option>
+                                                <option value="yes">Yes</option>
+                                                <Option value="no">No</Option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <small class="tags">Power-BackUp+</small>
+                                            <select class="deals-type"  formControlName="powerBackup">
+                                                <Option value="null">none</Option>
+                                                <option value="Available">Yes</option>
+                                                <Option value="Not Available">No</Option>
+                                              </select>
+                </div>
+                <div class="btn2">
+                    <button class="btn btn-s" (click)="onSearchFiltersPG()">Search</button>
+                </div>
+       
+        </div>
+    </form>
+  </div>
+
+</div>
+

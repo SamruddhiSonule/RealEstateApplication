@@ -1,0 +1,108 @@
+.previous_search{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.since_searched{
+    font-size: 23px;
+}
+.line{
+    height: 1px;
+    background-color: rgb(182, 180, 180);
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+.imges{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.img1{
+    position: relative;
+    height: 100%;
+}
+.ontopBTN{
+    position: absolute; /* Position the div absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.943), rgba(255, 255, 255, 0)); /* Gradient opacity from bottom to top */
+    
+    transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+    flex-direction: column;
+    
+}
+.ontopBTN:hover .imges{
+    filter: blur(20px);
+}
+
+.labelling{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 210px;
+    font-size: 24px;
+    color: #504819;
+    padding: 4px;
+    width: 240px;
+    border-radius: 20px;
+   
+}
+.labelling2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    font-size: 17px;
+    color: #504819;
+    padding: 4px;
+    width: 240px;
+    border-radius: 20px;
+    flex-direction: column;
+}
+.container_engagement{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.search_button1{
+    height: 300px;
+    background-color: #f5f1f1;
+    width: 300px;
+    border-radius: 10px;
+}
+.search_button1:hover{
+    box-shadow: 0 0 10px rgb(111, 180, 175);
+}
+.box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    margin-left: 200px;
+    margin-right: 0px;
+}
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    
+}
+
+.label{
+    display: flex;
+    justify-content: center;
+    width: 170px;
+    background-color: #FCDC2A;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: rgb(70, 65, 65);
+    font-size: 17px;
+}

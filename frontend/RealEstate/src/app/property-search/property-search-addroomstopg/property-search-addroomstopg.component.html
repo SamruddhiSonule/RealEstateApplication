@@ -1,0 +1,66 @@
+
+
+<div class="propertyform">
+    <div>
+        <Small style="font-size: 15px;">Add Room to &nbsp; <span style="font-size: 20px;">{{propertyPG?.propertyPGName}}.....</span></Small>
+    </div>
+    <div class="formRB">
+        <form [formGroup]="sharingRooms" (ngSubmit)="onSubmit()">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Room No:*</td>
+                        <td><input type="text" class="form-control borderd" placeholder="property name" formControlName="roomNo"></td>
+                    </tr>
+                    <tr>
+                        <td>Sharing*</td>
+                        <td><select class="deals-type" formControlName="sharing" >
+                            <Option value="Single">Single Bed</Option>
+                            <Option value="Two">Two Bed Sharing</Option>
+                            <Option value="Three">Three Bed Sharing</Option>
+                          </select></td>
+                    </tr>
+                    <tr>
+                        <td>Rent*</td>
+                        <td><input type="number" class="form-control borderd" placeholder="eg. 7000" formControlName="rent"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Food Availability*</td>
+                        <td>
+                        <div class="radio">
+                            <input type="radio" formControlName="foodAvailability" value="yes"> Yes
+                            <input type="radio" formControlName="foodAvailability" value="no"> No
+                        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Amenities*</td>
+                        <td><input type="text" class="form-control borderd" placeholder="in sq.ft" formControlName="amenities"></td>
+                    </tr>
+                    <tr>
+                        <td>Available For*</td>
+                        <td>
+                        <div class="radio">
+                            <input type="radio" formControlName="availableFor" value="Boys"> Boys
+                            <input type="radio" formControlName="availableFor" value="Girls"> Girls
+                        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5"><label class="label">Upload Images*</label></td>
+                        <div class="">
+                            <th>
+                                <div class="imageBox">
+                                    <input type="file"
+                                    class="form-control pF" aria-describedby="helpId" placeholder="accountNumber" accept=".jpg" (change)= onImages1($event) multiple>
+                                </div>
+                            </th>
+                        </div>
+                    </tr>
+                </thead>
+            </table>
+            <button type="submit" class="btn submit-btn">Submit</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,490 @@
+.main-container{
+    background-color: #fffefe;
+    position: relative;
+    height: 1200px;
+
+}
+.images{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(233, 255, 255);
+    border: 0.5px solid;
+    padding: 20px;
+    border-color: antiquewhite;
+    box-shadow: 0 0 10px rgb(201, 201, 201);
+    width: 98%;
+    border-radius: 10px;
+    
+}
+.img2{
+
+}
+.custom-dialog-container {
+    border-radius: 30px;
+  }
+.img1{
+    background-color: antiquewhite;
+    height: 280px;
+    width: 200px;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+.img1 img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.img1 img:hover{
+    box-shadow: 0 0 10px rgb(73, 138, 138);
+    -webkit-transition: 0.5s;
+}
+.img2{
+    margin-left: 20px;
+    background-color: antiquewhite;
+    height: 280px;
+    width: 200px;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+}
+.img2 img{
+    object-fit: cover;
+}
+.details{
+    background-color: rgb(255, 255, 255);
+    height: 450px;
+    width: 95%;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: 0.5px solid;
+    border-color: rgb(252, 255, 84);
+    box-shadow: 0 0 8px rgb(255, 255, 137);
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.detailss{
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    width: 95%;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: 0.5px solid;
+    border-color: rgb(252, 255, 84);
+    box-shadow: 0 0 8px rgb(255, 255, 137);
+    display: flex;
+    
+    flex-direction: column;
+}
+.roww1 {
+    display: flex;
+    
+    align-items: center;
+    margin-left: 70px;
+    
+    
+}
+.box1{
+    display: flex;
+    
+    flex-direction: column;
+   
+}
+.roww2{
+    display: flex;
+    
+    align-items: center;
+    margin-left: 70px;
+}
+.roww3{
+    display: flex;
+    align-items: center;
+    margin-left: 34px;
+    margin-top: 27px;
+    margin-bottom: 20px;
+}
+.row1{
+   
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-right: 100px;
+
+}
+.row3{
+   
+    justify-content: space-evenly;
+  
+    margin-right: 100px;
+
+   
+}
+
+.row2{
+    justify-content: space-evenly;
+    margin-top: 40px;
+    margin-right: 80px;
+
+}
+
+.tagN{
+    font-size: 16px;
+
+}
+.tagB{
+    font-weight: 500;
+    font-size: 18px;
+}
+.space{
+    height: 200px;
+    background-color: #cccccc00;
+}
+.contacts{
+    background-color: rgb(255, 250, 243);
+    padding: 20px;
+    height: 50px;
+    width: 96%;
+    margin: auto;
+    border-radius: 10px;
+    border: .5px solid;
+    border-color: rgb(245, 221, 9);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.contac-user{
+    
+}
+.select{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+   
+}
+.contact{
+    background-color: #FCDC2A;
+    width: 240px;
+    padding: 5px;
+    font-size: 16px;
+}  
+
+.details-others{
+    background-color: rgb(255, 255, 255);
+    margin-top: 40px;
+    width: 97%;
+    margin: auto;
+    padding: 20PX;
+    border-radius: 20px;
+   
+}
+.details-otherss{
+
+   
+    width: 97%;
+    margin: auto;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comparisonBTN{
+    border: 0.5px solid;
+    border-color: #FCDC2A;
+}
+.blur-background {
+    filter: blur(5px);
+  }
+  .btn2{
+    margin-left: 10px;
+}
+.tags{
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 5px; 
+    
+}
+.tagss{
+    font-size: 16px;
+}
+.filter-tag{
+    font-size: 18px;
+    
+}
+.deals-type{
+    
+    border-radius: 5px;
+    height:30px;
+    width: 100px;
+    
+}
+.btn1{
+    background-color: #FCDC2A;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    border-radius: 50px;
+}
+.filterss{
+    display: flex;
+
+    align-items: center;
+    
+}
+.rooms{
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* for Sharring room */
+
+.prop-btn{
+    background-color: rgb(247, 240, 240);
+    width: 1080px;
+    margin-top: 20px;
+    height: 280px;
+    box-shadow: 0 0 10px rgb(187, 186, 186);
+   
+}
+
+.prop-btn:hover{
+    box-shadow: 0 0 10px rgb(149, 123, 123);
+    -webkit-transition: 0.5s;
+    
+}
+.main-box-botn{
+    display: flex;
+    
+}
+.main-data-price{
+    width: 670px;
+}
+.imagess{
+    background-color: aliceblue;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    border: 0.5px solid;
+    border-color: rgb(210, 209, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+   
+}
+.imagess img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.data{
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    width: 800px;
+    border-radius: 10px;
+    border: 0.5px solid;
+    border-color: rgb(210, 209, 209);
+    margin-left: 5px;
+}
+.price{
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    width: 800px;
+    border-radius: 10px;
+    border: 0.5px solid;
+    border-color: rgb(210, 209, 209);
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    
+}
+.rs{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-left: 450px;
+    font-weight: 500;
+}
+.priceRS{
+    margin-left: 60px;
+}
+.buttonPrice{
+    background-color: rgb(252, 244, 85);
+    border-radius: 20px;
+    height: 30px;
+    font-size: 14px;
+    padding: 2px;
+    margin-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.name{
+    margin-top: 10px;
+}
+.results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.resnm{
+    font-size: 20px;
+}
+.nm{
+   
+    font-size: 16px;
+    font-weight: 500 ;
+    margin-right: 50px;
+   margin-bottom: 0px;
+   margin-left: 10px;
+   width: 400px;
+}
+.society{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400 ;
+    margin-right: 560px;
+    margin-bottom: 40px;
+    
+}
+.societNM{
+    margin-right: 100px;
+}
+.dataC{
+    
+    height: 110px;
+    width: 770px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    border: 0.5px solid;
+    border-color: rgb(210, 209, 209);
+    border-radius: 10px;
+    margin-top: 10px;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 30px rgb(242, 240, 240);
+}
+.cont{
+    display: flex;
+    align-items: start;
+    width: 780px;
+    justify-content: space-between;
+}
+.favorite{
+    color: rgb(255, 0, 0);
+    font-size: 19px;
+}
+.descript{
+ 
+}
+.detailse{
+    height: 100px;
+    display: flex;
+   align-items: center;
+    
+  
+}
+.descript{
+    position: absolute;
+    z-index: 1;
+    margin-top: 70px;
+    margin-left: 10px;
+ 
+
+}
+
+.desc{
+    font-size: 12px;
+    position: relative;
+    z-index: 2;
+    
+}
+.hidden {
+    display: none;
+}
+.info-disc{
+    background-color: rgb(233, 245, 245);
+    
+}
+.dropInfo{
+    margin-left: 365px;
+    margin-top: 5px;
+}
+.fa-sort-asc{
+    margin-right: 390px;
+}
+.first-row{
+   
+
+}
+.area{
+   
+    display: flex;
+
+  
+    margin-left: 20px;
+}
+#label{
+    font-weight: 350;
+    font-size: 12.5px;
+   
+}
+#value{
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+}
+.area2{
+   
+    display: flex;
+    flex-direction: column;
+   
+    margin-left: 100px;
+}
+.area,
+.area2 {
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 5px; 
+}
+.filters{
+    border-bottom: 1px solid black;
+}
+
+/* for sharing rooms end */
+.filtersSharingRooms{
+    height: 60px;
+    width: 80%;
+    background-color: #fffff6;
+    border: 0.5px solid ;
+    border-radius: 30px;
+    border-color: #FCDC2A;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    
+
+}
+.btn-s{
+    background-color: rgb(255, 249, 242);
+    border: 0.5px solid;
+    border-color: #FCDC2A;
+}

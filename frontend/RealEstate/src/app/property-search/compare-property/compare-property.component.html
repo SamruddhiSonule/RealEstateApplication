@@ -1,0 +1,280 @@
+
+<div class="main-container">
+
+    <app-home></app-home>
+<div class="combine-prop">
+    <div class="left-prop">
+        <div class="initial">
+            <small class="initialnm"> Initial Property</small>
+           </div>
+     <div class="main-box">
+       <!-- images       -->
+      
+         <div class="images" >
+                 <div class="img1" *ngFor="let i of selectedProperty.propertyImages">
+                     <img [src]="'data:image;base64,' + i.image" alt="">
+                 </div>
+                
+             </div>
+     <!-- details -->
+             <div class="details">
+                <!-- row1  -->
+                 <div class="roww1">
+     <div class="box1">
+         
+         <div class="row1">
+             <div class="tags">
+                 <small class="tagN">Price:</small>
+                 &nbsp;<small class="tagB">{{formatPrice(selectedProperty.price)}}</small>
+             </div>
+             <div class="tags">
+                 <small class="tagN">FlatBHK</small>
+                 &nbsp; <small class="tagB">{{selectedProperty.flatBHK}}</small>
+             </div>
+         </div>   
+         <div class="row1">
+             <div class="tags">
+                 <small class="tagN">Balcony:</small>
+                 &nbsp;<small class="tagB">{{selectedProperty.balcony}}</small>
+             </div>
+             <div class="tags">
+                 <small class="tagN">Parking</small>
+                 &nbsp; <small class="tagB">{{selectedProperty.parking}}</small>
+             </div>
+         </div>    
+     </div>
+                    <div class="box1">
+                             <div class="row1">
+                                 <div class="tags">
+                                     <small class="tagN">Property TYPE:</small>
+                                     &nbsp;<small class="tagB">{{selectedProperty.propertyTYPE}}</small>
+                                 </div>
+                                 <div class="tags">
+                                     <small class="tagN">Carpet Area</small>
+                                     &nbsp; <small class="tagB">{{selectedProperty.carpetArea}}&nbsp;sq.ft.</small>
+                                 </div>
+                             </div>    
+                             <div class="row1">
+                                 <div class="tags">
+                                     <small class="tagN">Property Locality</small>
+                                     &nbsp; <small class="tagB">{{selectedProperty.propertyLocality}}</small>
+                                 </div>
+                                 <div class="tags">
+                                     <small class="tagN">Facing:</small>
+                                     &nbsp;<small class="tagB">{{selectedProperty.facing}}</small>
+                                 </div>
+     
+                             </div>
+                    </div>
+             <div class="box1">
+                     <div class="row1">
+                         <div class="tags">
+                             <small class="tagN">Construction Phase</small>
+                             &nbsp; <small class="tagB">{{selectedProperty.constructionPhase}}</small>
+                         </div>
+                         <div class="tags">
+                             <small class="tagN">Furnishing:</small>
+                             &nbsp;<small class="tagB">{{selectedProperty.furnishing}}</small>
+                         </div>
+                     </div>    
+                     <div class="row1">
+                         <div class="tags">
+                             <small class="tagN">Number Of Bathroom:</small>
+                             &nbsp;<small class="tagB">{{selectedProperty.numberOfBathroom}}</small>
+                         </div>
+                         <div class="tags">
+                             <small class="tagN">forSaleOrRentString</small>
+                             &nbsp; <small class="tagB">{{selectedProperty.forSaleOrRentString}}</small>
+                         </div>
+                     </div>
+            </div>
+            <div class="box1">
+                         <div class="row1">
+                             <div class="tags">
+                                 <small class="tagN">Society Name</small>
+                                 &nbsp; <small class="tagB">{{selectedProperty.societyName}}</small>
+                             </div>
+                             <div class="tags">
+                                 <small class="tagN">Agent Name</small>
+                                 &nbsp; <small class="tagB">{{userDetailsI?.userAgentName}}</small>
+                             </div>
+                         </div>    
+                         
+                     </div>
+                     
+                     <!-- row2 -->
+                 </div>
+                 <div class="details-others">
+                     <div class="roww3">
+                         <div class="row3">
+                             <div class="tags">
+                                 <small class="tagN">Property Name:</small>
+                                 &nbsp;<small class="tagB">{{selectedProperty.propertyRBName}}</small>
+                             </div>
+                             <div class="tags">
+                                 <small class="tagN">Locations:</small>
+                                 &nbsp;<small class="tagB">{{selectedProperty.location}}</small>
+                             </div>
+                             <div class="tags">
+                                 <small class="tagN">Amenities:</small>
+                                 &nbsp; <small class="tagB">{{selectedProperty.amenities}}</small>
+                             </div>
+                             <div class="tags">
+                                 <small class="tagN">Description:</small>
+                                 &nbsp; <small class="tagB">{{selectedProperty.description}}</small>
+                             </div>
+                         </div> 
+                        
+                     </div>
+                     <div class="contacts">
+                         <div class="contac-user">
+                             
+                             &nbsp;
+                             <button class="btn contact" (click)="openContactPop()">Get Contact Info. </button>
+                         </div>
+                    </div>
+                    
+                 </div>
+                 </div>
+             </div>
+    </div>
+    <div class="right-prop">
+        <div class="initial">
+            <small class="initialnm"> Compare With ...</small>
+           </div>
+     <div class="main-box">
+       <!-- images       -->
+      
+         <div class="images" >
+                 <div class="img1" *ngFor="let i of compareProperty.propertyImages">
+                     <img [src]="'data:image;base64,' + i.image" alt="">
+                 </div>
+                
+             </div>
+     <!-- details -->
+             <div class="details">
+                <!-- row1  -->
+                 <div class="roww1">
+     <div class="box1">
+         
+         <div class="row1">
+             <div class="tags">
+                 <small class="tagN">Price:</small>
+                 &nbsp;<small class="tagB">{{formatPrice(compareProperty.price)}}</small>
+             </div>
+             <div class="tags">
+                 <small class="tagN">FlatBHK</small>
+                 &nbsp; <small class="tagB">{{compareProperty.flatBHK}}</small>
+             </div>
+         </div>   
+         <div class="row1">
+             <div class="tags">
+                 <small class="tagN">Balcony:</small>
+                 &nbsp;<small class="tagB">{{compareProperty.balcony}}</small>
+             </div>
+             <div class="tags">
+                 <small class="tagN">Parking</small>
+                 &nbsp; <small class="tagB">{{compareProperty.parking}}</small>
+             </div>
+         </div>    
+     </div>
+                    <div class="box1">
+                             <div class="row1">
+                                 <div class="tags">
+                                     <small class="tagN">Property TYPE:</small>
+                                     &nbsp;<small class="tagB">{{compareProperty.propertyTYPE}}</small>
+                                 </div>
+                                 <div class="tags">
+                                     <small class="tagN">Carpet Area</small>
+                                     &nbsp; <small class="tagB">{{compareProperty.carpetArea}}&nbsp;sq.ft.</small>
+                                 </div>
+                             </div>    
+                             <div class="row1">
+                                 <div class="tags">
+                                     <small class="tagN">Property Locality</small>
+                                     &nbsp; <small class="tagB">{{compareProperty.propertyLocality}}</small>
+                                 </div>
+                                 <div class="tags">
+                                     <small class="tagN">Facing:</small>
+                                     &nbsp;<small class="tagB">{{compareProperty.facing}}</small>
+                                 </div>
+     
+                             </div>
+                    </div>
+             <div class="box1">
+                     <div class="row1">
+                         <div class="tags">
+                             <small class="tagN">Construction Phase</small>
+                             &nbsp; <small class="tagB">{{compareProperty.constructionPhase}}</small>
+                         </div>
+                         <div class="tags">
+                             <small class="tagN">Furnishing:</small>
+                             &nbsp;<small class="tagB">{{compareProperty.furnishing}}</small>
+                         </div>
+                     </div>    
+                     <div class="row1">
+                         <div class="tags">
+                             <small class="tagN">Number Of Bathroom:</small>
+                             &nbsp;<small class="tagB">{{compareProperty.numberOfBathroom}}</small>
+                         </div>
+                         <div class="tags">
+                             <small class="tagN">forSaleOrRentString</small>
+                             &nbsp; <small class="tagB">{{compareProperty.forSaleOrRentString}}</small>
+                         </div>
+                     </div>
+            </div>
+            <div class="box1">
+                         <div class="row1">
+                             <div class="tags">
+                                 <small class="tagN">Society Name</small>
+                                 &nbsp; <small class="tagB">{{compareProperty.societyName}}</small>
+                             </div>
+                             <div class="tags">
+                                 <small class="tagN">Agent Name</small>
+                                 &nbsp; <small class="tagB">{{userDetailsC?.userAgentName}}</small>
+                             </div>
+                         </div>    
+                         
+                     </div>
+                     
+                     <!-- row2 -->
+                 </div>
+                 <div class="details-others">
+                     <div class="roww3">
+                         <div class="row3">
+                             <div class="tags">
+                                 <small class="tagN">Property Name:</small>
+                                 &nbsp;<small class="tagB">{{compareProperty.propertyRBName}}</small>
+                             </div>
+                             <div class="tags">
+                                 <small class="tagN">Locations:</small>
+                                 &nbsp;<small class="tagB">{{compareProperty.location}}</small>
+                             </div>
+                             <div class="tags">
+                                 <small class="tagN">Amenities:</small>
+                                 &nbsp; <small class="tagB">{{compareProperty.amenities}}</small>
+                             </div>
+                             <div class="tags">
+                                 <small class="tagN">Description:</small>
+                                 &nbsp; <small class="tagB">{{compareProperty.description}}</small>
+                             </div>
+                         </div> 
+                        
+                     </div>
+                     <div class="contacts">
+                         <div class="contac-user">
+                             
+                             &nbsp;
+                             <button class="btn contact" (click)="openContactPopForCompare()">Get Contact Info. </button>
+                         </div>
+                    </div>
+                    
+                 </div>
+                 </div>
+             </div>
+    </div>
+</div>
+
+
+        
+</div>

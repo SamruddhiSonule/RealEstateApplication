@@ -1,0 +1,41 @@
+.bar{
+    background-color: #ece7e7;
+    margin-top: 20px;
+    border-radius: 0 10px 10px 0px ;
+    height: 1000px;
+    width: 350px;
+}
+.links{
+    text-decoration: none;
+    color: rgb(41, 40, 40);
+    cursor: pointer;  
+    width: 200px; 
+    margin-top: 10px;
+    background-color: rgb(219, 224, 223);
+    padding: 2px;
+    border: 0.5px solid;
+    border-color: rgb(232, 207, 175);
+    border-radius: 10px;
+}
+.links:hover{
+    color: rgb(145, 137, 137);
+}
+.features{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+.line{
+    height: 0.5px;
+    width: 300px;
+    background-color: rgb(172, 168, 168);
+    margin-top: 675px;
+    margin-left: 10px;
+}
+.table{
+color: aqua;
+width: 200px;
+}
+
+

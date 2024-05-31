@@ -1,0 +1,25 @@
+.form-control{
+    width: 400px;
+}
+.form{
+    display: flex;
+    margin-left: 100px;
+}
+.submit-btn{
+    background-color: rgb(202, 181, 155);
+}
+.boton{
+    display: flex;
+    justify-content: center;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;   
+}
+.heading{
+    margin-left: 230px;
+    margin-top: 90px;
+}
+.edit-text{
+    font-size: 20px;
+}

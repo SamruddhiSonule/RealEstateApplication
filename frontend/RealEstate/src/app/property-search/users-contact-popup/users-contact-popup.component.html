@@ -1,0 +1,25 @@
+<div class="popup-contact">
+    
+    <div mat-dialog-content class="details">
+        <table>
+            <tr>
+              <th><small class="tag1">{{userDetails?.userType}}&nbsp;Name:</small></th>
+              <td><small class="tag2">{{ userDetails.userAgentName }}</small></td>
+            </tr>
+            <tr>
+              <th><small class="tag1">Contact No.:</small></th>
+              <td>&nbsp;<small class="tag2">{{ userDetails.userAgentContact }}</small></td>
+            </tr>
+            <tr>
+              <th><small class="tag1">Email ID:</small></th>
+              <td><small class="tag2">{{ userDetails.userAgentEmail }}</small></td>
+            </tr>
+          </table>
+          
+    </div>
+    <div mat-dialog-actions class="btnn">
+      
+           <button mat-raised-button  class="btn closeBTN" (click)="close()">Close</button> 
+    </div>
+    
+</div>

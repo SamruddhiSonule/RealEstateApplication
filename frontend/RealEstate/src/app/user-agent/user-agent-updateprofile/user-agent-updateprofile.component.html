@@ -1,0 +1,56 @@
+<Div class="formsd">
+    <div class="heading">
+        <small>Set up your Profile...</small>
+    </div>
+    <form [formGroup]="userAuthAgent" (ngSubmit)="onSubmit()">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" class="form-control borderd" placeholder="Address" formControlName="userAgentAddress"></td>
+                </tr>
+                <tr>
+                    <td>Type Of Deals</td>
+                    <td>
+                        <select class="deals-type" formControlName="typeOfDeals" >
+                        <Option disabled>{{userAuthAgent.controls['typeOfDeals'].value}}</Option>
+                       <option *ngFor="let t of typesOfDeals">{{t}}</option>
+                      </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type Of Poperties You Deals In</td>
+                    <td>
+                        <select class="deals-type" formControlName="typeOfResidentialProperties" >
+                        <Option disabled>{{userAuthAgent.controls['typeOfDeals'].value}}</Option>
+                       <option *ngFor="let t of typesOfPropertyDeals">{{t}}</option>
+                      </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Operating Since</td>
+                    <td><input type="date" class="form-control date" placeholder="Address" formControlName="operatingSince"></td>
+                </tr>
+                <tr>
+                    <td>Expertise In</td>
+                    <td><input type="text" class="form-control borderd" placeholder="Experise In" formControlName="expertiseIn"></td>
+                </tr>
+                <tr>
+                    <td>Description of Business</td>
+                    <td><input type="text" class="form-control borderd" placeholder="description Of Business" formControlName="descriptionOfBusiness"></td>
+                </tr>
+                <tr>
+                    <td>Can Provide Loan</td>
+                    <td>
+                        <div class="radio">
+                        <input type="radio" formControlName="canProvidesLoan" value="yes"> Yes
+                        <input type="radio" formControlName="canProvidesLoan" value="no"> No
+                    </div>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+        <button type="submit" class="btn submit-btn">Submit</button>
+    </form>
+
+</Div>

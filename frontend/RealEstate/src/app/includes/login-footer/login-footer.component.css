@@ -1,0 +1,23 @@
+.footer{
+    background-color: #9BB0C1;
+    height: 130px;
+    margin-top: 120px;
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright{
+    color: #5e5c5c;
+    font-size: 17px;
+}
+.links{
+
+}
+.link_aboutus{
+    text-decoration: none;
+    color: rgb(48, 47, 47);
+    margin-left: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,343 @@
+<div class="show-add-room" *ngIf="showAddRoom">
+    <router-outlet></router-outlet>
+</div>
+<div class="form" *ngIf="!showAddRoom">
+    <div class="heading">
+        <small>Which Property would You like to Post...!</small>
+    </div>
+    <div class="property-choice">
+        <button class="btn type" (click)="showPropertyForm('RB')" [ngClass]="{'typeSelect':resultPGshow}">Resedential Property/MultiStorey Appartments</button>
+        <button class="btn type" (click)="showPropertyForm('PG')" [ngClass]="{'typeSelect':resultRBshow}">PG</button>
+    </div>
+    <div class="property-form">
+        <div class="propertyform"  *ngIf="showPropertyRBForm">
+                <div class="formRB">
+                    <form [formGroup]="propertyRB" (ngSubmit)="onSubmit()">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td>Flat No.*</td>
+                                    <td><input type="text" class="form-control borderd" placeholder="property name" formControlName="propertyRBName"></td>
+                                </tr>
+                                <tr>
+                                    <td>Description of Property*</td>
+                                    <td><input type="text" class="form-control borderd" placeholder="desciption" formControlName="description"></td>
+                                </tr>
+                                <tr>
+                                    <td>Locality*</td>
+                                    <td><select class="deals-type" formControlName="propertyLocality" >
+                                        <!-- <Option disabled>{{propertyRB.controls['propertyLocality'].value}}</Option> -->
+                                       <option *ngFor="let t of localitiesInPune" [value]="t">{{t}}</option>
+                                      </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Price*</td>
+                                    <td><input type="number" class="form-control borderd" placeholder="eg. 7000000" formControlName="price"></td>
+                                </tr>
+                                <tr>
+                                    <td>Location*</td>
+                                    <td><input type="text" class="form-control borderd" placeholder="Address of Property" formControlName="location"></td>
+                                </tr>
+                                <tr>
+                                    <td>Flat BHK*</td>
+                                    <td><select class="deals-type" formControlName="flatBHK" >
+                                        <!-- <Option disabled>{{propertyRB.controls['flatBHK'].value}}</Option> -->
+                                       <option *ngFor="let t of bhkFlat" [value]="t">{{t}}</option>
+                                      </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Balcony Available*</td>
+                                    <td>
+                                    <div class="radio">
+                                        <input type="radio" formControlName="balcony" value="yes"> Yes
+                                        <input type="radio" formControlName="balcony" value="no"> No
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Parking*</td>
+                                    <td>
+                                        <div class="parkingSet">
+                                           <div class="available-parking">
+                                            <select class="deals-type parking" formControlName="parking" >
+                                                <!-- <Option disabled>{{propertyRB.controls['parking'].value}}</Option> -->
+                                               <option *ngFor="let t of parking" [value]="t">{{t}}</option>
+                                            </select>
+                                           </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Property Type*</td>
+                                    <td><select class="deals-type" formControlName="propertyTYPE" >
+                                        <!-- <Option disabled>{{propertyRB.controls['propertyTYPE'].value}}</Option> -->
+                                       <option *ngFor="let t of propertyType" [value]="t">{{t}}</option>
+                                      </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Carpet Area*</td>
+                                    <td><input type="number" class="form-control borderd" placeholder="in sq.ft" formControlName="carpetArea"></td>
+                                </tr>
+                                <tr>
+                                    <td>Facing*</td>
+                                    <td><select class="deals-type" formControlName="facing" >
+                                        <!-- <Option disabled>{{propertyRB.controls['facing'].value}}</Option> -->
+                                       <option *ngFor="let t of facing" [value]="t">{{t}}</option>
+                                      </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Construction Phase*</td>
+                                    <td><select class="deals-type" formControlName="constructionPhase" >
+                                        <!-- <Option disabled>{{propertyRB.controls['constructionPhase'].value}}</Option> -->
+                                       <option *ngFor="let t of constructionPhase" [value]="t">{{t}}</option>
+                                      </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Furnishing*</td>
+                                    <td>
+                                    <div class="radio">
+                                        <input type="radio" formControlName="furnishing" value="Furnished"> Furnished
+                                        <input type="radio" formControlName="furnishing" value="Unfurnished"> Unfurnished
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>forSaleOrRentString*</td>
+                                    <td>
+                                    <div class="radio">
+                                        <input type="radio" formControlName="forSaleOrRentString" value="buy"> For Sell
+                                        <input type="radio" formControlName="forSaleOrRentString" value="Rent"> For Rent
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Society Name*</td>
+                                    <td><input type="text" class="form-control borderd" placeholder="Society name" formControlName="societyName"></td>
+                                </tr>
+                                <tr>
+                                    <td>Number of Bathrooms*</td>
+                                    <td><select class="deals-type" formControlName="numberOfBathroom" >
+                                        <!-- <Option disabled>{{propertyRB.controls['numberOfBathroom'].value}}</Option> -->
+                                       <option *ngFor="let t of noOfBedrooms" [value]="t">{{t}}</option>
+                                      </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Amenities*</td>
+                                    <td><input type="text" class="form-control borderd" placeholder="eg. swimming pool,gym" formControlName="amenities"></td>
+                                </tr>
+                               
+                                <tr>
+                                    <td rowspan="5"><label class="label">Upload Images*</label></td>
+                                    <div class="">
+                                        <th>
+                                            <div class="imageBox">
+                                                <input type="file"
+                                                class="form-control pF" aria-describedby="helpId" placeholder="accountNumber" accept=".jpg" (change)= onImages1($event) multiple>
+                                            </div>
+                                        </th>
+                                    </div>
+                                </tr>
+                            </thead>
+                        </table>
+                        <button type="submit" class="btn submit-btn">Submit</button>
+                    </form>
+                </div>
+        </div>
+        <div class="propertyform"  *ngIf="showPropertyPGForm">
+
+           <div class="buttons">
+            <div>
+                <button class="btn add-Pg" (click)="addNewPG()">Add New Pg</button>
+            </div>
+            <div>
+                <button class="btn add-Pg" (click)="addRoomsToPG()">Add New Room to Existing PG</button>
+            </div>
+           </div>
+            <div class="add-new-Pg" *ngIf="addNewPGs">
+                <form [formGroup]="propertyPG" (ngSubmit)="onSubmitPG()">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Name of PG*</td>
+                                <td><input type="text" class="form-control borderd" placeholder="property name" formControlName="propertyPGName"></td>
+                            </tr>
+                            <tr>
+                                <td>Description of PG*</td>
+                                <td><input type="text" class="form-control borderd" placeholder="desciption" formControlName="description"></td>
+                            </tr>
+                            <tr>
+                                <td>Locality*</td>
+                                <td><select class="deals-type" formControlName="locality" >
+                                    <!-- <Option disabled>{{propertyRB.controls['propertyLocality'].value}}</Option> -->
+                                   <option *ngFor="let t of localitiesInPune" [value]="t">{{t}}</option>
+                                  </select></td>
+                            </tr>
+                            <tr>
+                                <td>Deposite Amount*</td>
+                                <td><input type="number" class="form-control borderd" placeholder="eg. 10000" formControlName="depositeAmmount"></td>
+                            </tr>
+                            <tr>
+                                <td>Notice Period*</td>
+                                <td><select class="deals-type" formControlName="noticePeriod" >
+                                    <!-- <Option disabled>{{propertyRB.controls['flatBHK'].value}}</Option> -->
+                                   <option value="1 Month">1 Month</option>
+                                   <option value="2 Month">2 Month</option>
+                                   <option value="3 Month">3 Month</option>
+                                  </select></td>
+                            </tr>
+                            <tr>
+                                <td>FoodAvailability*</td>
+                                <td><select class="deals-type" formControlName="foodAvailability" >
+                                    <!-- <Option disabled>{{propertyRB.controls['flatBHK'].value}}</Option> -->
+                                   <option value="Yes">Yes</option>
+                                   <option value="No">No</option>
+                                  </select></td>
+                            </tr>
+                            <tr>
+                                <td>AC Rooms Availability</td>
+                                <td>
+                                <div class="radio">
+                                    <input type="radio" formControlName="acRoomsAvailability" value="yes"> Yes
+                                    <input type="radio" formControlName="acRoomsAvailability" value="no"> No
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Parking*</td>
+                                <td>
+                                    <div class="Parking">
+                                       <div class="available-parking">
+                                        <select class="deals-type parking" formControlName="parking" >
+                                            <!-- <Option disabled>{{propertyRB.controls['parking'].value}}</Option> -->
+                                           <option value="Avaialable For Bike">Avaialable For Bike</option>
+                                           <option value="Not Avaialable">Not Avaialable</option>
+                                           
+                                        </select>
+                                       </div>
+                                    </div>
+                                </td>
+                                <td>
+                                
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>One Person Rent*</td>
+                                <td><input type="number" class="form-control borderd" placeholder="ex. 5000" formControlName="onePersonRent"></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Address of PG*</td>
+                                <td><input type="text" class="form-control borderd" placeholder="enter full address" formControlName="location"></td>
+                            </tr>
+                            <tr>
+                                <td>Power Backup*</td>
+                                <td><select class="deals-type" formControlName="powerBackup" >
+                                    <!-- <Option disabled>{{propertyRB.controls['facing'].value}}</Option> -->
+                                   <option value="Available">Available</option>
+                                   <option value="Not Available">Not Available</option>
+                                  </select></td>
+                            </tr>
+                            <tr>
+                                <td>Available For*</td>
+                                <td><select class="deals-type" formControlName="availableFor" >
+                                    <!-- <Option disabled>{{propertyRB.controls['constructionPhase'].value}}</Option> -->
+                                   <option value="Boys">For Boys</option>
+                                   <option value="Boys">For Girls</option>
+                                   <option value="Combine">For Combine</option>
+                                   
+                                  </select></td>
+                            </tr>
+                            
+                         
+                        </thead>
+                    </table>
+                    <button type="submit" class="btn submit-btn" >Submit</button>
+                </form>
+            </div>
+            
+            <div class="add-new-roomto-pg" *ngIf="addRoomToPG">
+
+                <div class="selectPG">
+                    <div>
+                        <small style="font-size: 20px;">Select PG.....</small>
+                    </div>
+                </div>
+                <button class="btn prop-btn" *ngFor="let p of prpertyPGS" (click)="navigateToAddRoomTOPG(p.propertyPGID)">
+                    <div class="main-box-botn" >
+                        
+                        <div class="main-data-price">
+                            <div class="data">
+                                    <div class="name">
+                                        <div class="cont">
+                                               <div class="nmDiv">
+                                                <small class="nm">{{p.propertyPGName}} in {{p.locality}}, Pune</small> 
+                                               </div>
+                                             
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="societNM">
+                                        <small class="society">{{p.societyName}}</small> 
+                                    </div>
+                                    <div class="dataC">
+                                        <div class="details">
+                                                <div class="first-row">
+                                                    <div class="area">
+                                                        <small id="label">FOOD AVAILABILITY</small>
+                                                        <small id="value">{{p.foodAvailability}}</small>
+                                                    </div>
+                                                    <div class="area2">
+                                                        <small id="label">POWER BACKUP</small>
+                                                        <small id="value">{{p.powerBackup}}</small>
+                                                    </div>
+                                                    <div class="area2">
+                                                        <small id="label">AVAILABLE FOR</small>
+                                                        <small id="value">{{p.availableFor}}</small>
+                                                    </div>
+                                                    <div class="area2">
+                                                        <small id="label">PARKING</small>
+                                                        <small id="value">{{p.parking}}</small>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                         <div class="descript">
+                                            <div class="info-disc">
+                                                <small class="desc"  [ngClass]="{'hidden': showMore}">
+                                                   {{p.description}}
+                                                </small>
+                                            </div>
+                                            
+                                            <div class="dropInfo">
+                                                <a (click)="toggleDescription()">
+                                                    <i class="fa fa-sort-asc" aria-hidden="true" *ngIf="!showMore"></i>
+                                                    <i class="fa fa-sort-desc" aria-hidden="true" *ngIf="showMore"></i>
+                                                </a>
+                                            </div>
+                                         </div>
+                                    </div>
+                            </div>
+                            <div class="price">
+                                <div class="priceRS">
+                                    <button class="btn buttonPrice">Add Room</button>
+                                </div>
+                                
+                                <div class="priceRS">
+                                    <small class="rs">&#x20B9; {{formatPrice(p.onePersonRent)}} <small class="perbed">/bed</small> </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </button>
+
+            </div>
+
+
+        </div>
+        
+       
+    </div>
+</div>

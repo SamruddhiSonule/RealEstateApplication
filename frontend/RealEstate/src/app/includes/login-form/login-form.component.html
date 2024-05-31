@@ -1,0 +1,34 @@
+<div class="line"></div>
+    <div class="container">
+        
+       <form [formGroup]="userauth">
+        <div class="form">
+            <div class="error">
+                <small class="errorMSG">{{userNotFound}}</small>
+            </div>
+            <div class="form-group">
+                <label for=""></label>
+                <input type="text" class="form-control" placeholder="Email ID : ex. abc@gmail.com" aria-describedby="helpId" formControlName="userEmail">
+                <small id="helpId" class="text-muted">email Id</small>
+              </div>
+              <div class="form-group">
+                <div class="password">
+                    <input type="password" class="form-control pass" placeholder="password" aria-describedby="helpId" formControlName="password" #pass>
+                    <div class="show-toggle">
+                        <a class="show-link" (click)="hidePassword()" #show>Show</a>
+                    </div>
+                </div>
+                <small id="helpId" class="text-muted">password</small>
+              </div>
+              <div class="bton_login">
+                  <button class="btn login_btn" (click)="onLogin()" [disabled]="!userauth.valid" >Login</button>
+              </div>
+        </div>
+       </form>
+            
+        <div class="signup">
+                new to gharr Imarat? &nbsp;<a class="signup_link"  (click)="nevigateToSignup()">SignUp</a>
+        </div>
+    </div>
+<div class="line1"></div>
+

@@ -1,0 +1,33 @@
+<div class="popup-contact">
+    
+    <div mat-dialog-content class="details">
+        <small style="font-weight: 400; font-size: 20px; margin-bottom: 20px;">Make Enquiry......</small>
+        <form [formGroup]="enquiryBox" (ngSubmit)="onSubmit()">
+
+            <table>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th><small class="tag1">{{userAgentDetails?.userType}}&nbsp;Name:</small></th>
+                    <td><small class="tag2">&nbsp;{{userAgentDetails?.userAgentName}}</small></td>  
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th><small class="tag1">Enquiry Message:</small></th>
+                    <td>&nbsp;<textarea class="form-input" placeholder="Message" formControlName="enquiryMessage">{{ enquiryBox.get('enquiryMessage').value }}></textarea></td>
+                </tr>
+                <div class="submit-tt">
+                    <th><Button class="btn submit" type="submit">Create Enquiry</Button></th>
+                </div>
+          </table>
+        </form>
+          
+    </div>
+    <!-- <div mat-dialog-actions class="btnn">
+           <button mat-raised-button  class="btn closeBTN" (click)="close()">Close</button> 
+    </div> -->
+    
+</div>

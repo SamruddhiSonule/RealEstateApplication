@@ -1,0 +1,86 @@
+
+<div class="line"></div>
+    <div class="container">
+       <form [formGroup]="userAgent">
+        <div *ngFor="let e of error | keyvalue">
+          <small style="color: red;">{{e.value}}</small>
+        </div>
+        <div class="form">
+           <div class="form-chec">
+            <label class="form-check-label">
+               <input type="radio" class="form-check-input"  name="userType" value="UserBuyer" (change)="selectedUserType='UserBuyer'" checked>
+               Buyer
+             </label>
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="userType" value="UserAgent" (change)="selectedUserType='UserAgent'">
+                Agent
+              </label>
+           
+           </div>
+           <div *ngIf="selectedUserType==='UserAgent'">
+                  
+              <div class="form-group" [formGroup]="userAgent">
+                <label for=""></label>
+                 <input type="text" class="form-control" placeholder="Name" aria-describedby="helpId" formControlName="userAgentName">
+               </div>
+               <div class="form-group">
+                 <label for=""></label>
+                  <input type="text" class="form-control" placeholder="Email" aria-describedby="helpId" formControlName="userAgentEmail">
+                </div>
+                <div class="form-group">
+                 <label for=""></label>
+                  <input type="text" class="form-control" placeholder="password" aria-describedby="helpId" formControlName="userAgentPassword">
+                </div>
+                <div class="form-group">
+                 <label for=""></label>
+                  <input type="text" class="form-control" placeholder="mobile number" aria-describedby="helpId" formControlName="userAgentContact">
+                </div>
+                <div class="accept_terms">
+                  <input type="checkbox" id="agreeCheckbox" (change)="agree='AGREE'" >
+                  <label for="agreeCheckbox">&nbsp;I agree to gharr Imarat terms and conditions</label>
+  
+                 </div>
+                <div class="bton_login">
+                    <button class="btn login_btn" (click)="onSignUp()" [disabled]="!userAgent.valid">SignUp</button>
+                </div>
+           </div>
+           <div *ngIf="selectedUserType==='UserBuyer'">
+            <form [formGroup]="userbuyer">
+
+              <div class="form-group" [formGroup]="userbuyer">
+                <label for=""></label>
+                 <input type="text" class="form-control" placeholder="Name" aria-describedby="helpId" formControlName="userBuyerName">
+               </div>
+               <div class="form-group">
+                 <label for=""></label>
+                  <input type="text" class="form-control" placeholder="Email" aria-describedby="helpId" formControlName="userBuyerEmail">
+                </div>
+                <div class="form-group">
+                 <label for=""></label>
+                  <input type="text" class="form-control" placeholder="password" aria-describedby="helpId" formControlName="userBuyerPassword">
+                </div>
+                <div class="form-group">
+                 <label for=""></label>
+                  <input type="text" class="form-control" placeholder="mobile number" aria-describedby="helpId" formControlName="userBuyerContact">
+                </div>
+                <div class="accept_terms">
+                  <input type="checkbox" id="agreeCheckbox" (change)="agree='AGREE'" >
+                  <label for="agreeCheckbox">&nbsp;I agree to gharr Imarat terms and conditions</label>
+  
+                 </div>
+                <div class="bton_login">
+                    <button class="btn login_btn" (click)="onSignUp()" [disabled]="!userbuyer.valid">SignUp</button>
+                </div>
+            </form>      
+            
+         </div>
+               
+        </div>
+       </form>
+            
+        <div class="signup">
+                Already have and account? &nbsp;<a class="signup_link" (click)="nevigateToLogIn()">LogIn</a>
+        </div>
+    </div>
+<div class="line1"></div>
+

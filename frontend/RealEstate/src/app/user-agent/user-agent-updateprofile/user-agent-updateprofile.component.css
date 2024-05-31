@@ -1,0 +1,44 @@
+.form-control{
+    width: 715px;
+}
+.typeofdeals{
+    display: flex;
+    align-items: center;
+}
+.select{
+    width: 615px;
+   
+}
+.deals-type{
+    
+    border-radius: 5px;
+    height:35px;
+    width: 600px;
+}
+.borderd{
+    border:0.4px solid;
+    height:35px;
+    width: 600px;
+}
+.date{
+    border:0.4px solid;
+    height:35px;
+    width: 250px;
+}
+.submit-btn{
+    background-color: #FCDC2A;
+}
+.formsd{
+    padding: 30px;
+    border-radius: 10px;
+}
+.heading{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.radio{
+    height: 30px;
+}
+.table{
+    border-radius: 10px;
+}

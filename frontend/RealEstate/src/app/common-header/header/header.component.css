@@ -1,0 +1,217 @@
+.container_header{
+    display: flex;
+    margin-bottom: 0px;
+}
+.header{
+    background-color: #FCDC2A;
+    height: 60px;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+    margin-bottom: 0px;
+    box-shadow: 0 0 10px rgb(255, 217, 0);
+}
+.sellYourPrope{ 
+    margin-left: 20px;
+   
+}
+.fa fa-caret-down{
+    margin-left:3px ;
+}
+.title{
+    margin-left: 30px;
+}
+h5{
+   color: white;
+   font-size: 30px;
+}
+.boxLS{
+    display: flex;
+   margin-left: 840px;
+    justify-content: start;
+    width: 10%;
+}
+.login{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 67%;
+    
+}
+.loggedin{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 47%;
+    
+}
+.loggedIn:hover .dropdown{
+    display: block;
+}
+.boxLSs{
+    display: flex;
+    
+}
+.pune_areas{
+    margin-left: 0px;
+    margin-right: 60px;
+    margin-top: 15px;
+}
+.btn{
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    position: relative; 
+   
+}
+
+.find_in_pune{
+    color: rgb(12, 79, 141);
+    background-color: #FCDC2A;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    position: relative; 
+    width: 180px;
+}
+
+.titlename {
+    text-decoration: none;
+    color: rgb(70, 60, 27);
+    font-size: 23px;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgb(165, 109, 37), rgb(70, 60, 27));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+}
+
+
+.signup{
+    text-decoration: none;
+    color:#B67352;
+    font-size: 15px;
+    cursor: pointer;
+}
+.signup:hover{
+    color: #644535;
+}
+.loginbtn{
+    background-color: #F6995C;
+    border-radius: 20px;
+    height: 35px;
+    font-size: 15px;
+    
+}
+.loggedIn{
+    width: 180px;
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 250px;
+    margin-left: 0px;
+    right: 10;
+    margin-right: 1000px;
+    box-shadow: 0 0 10px rgb(194, 194, 194);
+    
+}
+.dropdown_localities{
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 250px;
+    margin-left: 0px;
+    float: right;
+    margin-right: 70px;
+    box-shadow: 0 0 10px rgb(194, 194, 194);
+    z-index: 55;
+}
+.login:hover{
+    -webkit-transform: 4s;
+}
+.login:hover .dropdown {
+
+    display: block;
+    
+}
+.loggedin:hover .dropdown {
+
+    display: block;
+    
+}
+.pune_areas:hover{
+    -webkit-transform: 4s;
+}
+.pune_areas:hover .dropdown_localities {
+
+    display: block;
+    
+}
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+.dropdown_localities ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+.btn:hover{
+    background-color: #e9e8e8;
+}
+.hiddenDiv{
+    
+    background-color: #e9e8e800;
+    height: 15px;
+}
+.btnSell{
+    background-color: #fffb00;
+    margin-right: 0;
+    width: 160px;
+    height: 34px;
+    font-size: 15px;
+    padding: 5px;
+    
+}
+.image{
+    margin-left: 20px;
+    
+}
+img{
+    width: 100px;
+}
+.navLink{
+    font-size: 15px;
+}
+.locality_Options{
+    font-size: 12px;
+    text-decoration: none;
+    color: #644535;
+    cursor: pointer;
+}
+.locality_Options:hover{
+    text-shadow: 0 0 1.5px;
+}
+.myprofile-link{
+    text-decoration: none;
+    color: #644535;
+    cursor: pointer;
+}

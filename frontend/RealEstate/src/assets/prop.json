@@ -1,0 +1,93 @@
+{
+    "users": [
+      {
+        "id": "1",
+        "userBuilderName": "John Doe",
+        "userBuilderEmail": "abc@gmail.com",
+        "userBuilderPassword": "abc123",
+        "userBuilderContact": "1234567890",
+        "userBuilderAddress": "123 Main St, City, Country",
+        "typeOfDeals": "Sale",
+        "typeOfResidentialProperties": "Apartment",
+        "typeOfCommercialProperties": "Office Space",
+        "companyName": "ABC Realty",
+        "addressOfCompany": "456 Elm St, City, Country",
+        "operatingSince": "2010",
+        "expertiseIn": "Residential properties",
+        "descriptionOfBusiness": "We specialize in luxury residential properties.",
+        "localTime": "10:00 AM",
+        "localDate": "2024-04-06",
+        "userType": "Builder",
+        "propertyRentAndBuys": [
+          {
+            "propertyRBID": "01234567-89ab-cdef-0123-456789abcdef",
+            "propertyRBName": "Example Property",
+            "description": "Description of the property",
+            "propertyLocality": "Example Locality",
+            "price": 100000,
+            "location": "Example City",
+            "flatBHK": "3 BHK",
+            "balcony": "Available",
+            "parking": "Available",
+            "propertyTYPE": "Apartment",
+            "carpetArea": "1000 sq. ft.",
+            "facing": "North",
+            "constructionPhase": "Under Construction",
+            "furnishing": "Unfurnished",
+            "societyName": "Example Society",
+            "checkLonEligibility": "Yes",
+            "imagesOfProperties": ["image1.jpg", "image2.jpg"],
+            "numberOfBathroom": 2,
+            "amenities": "Swimming Pool, Gym, Park",
+            "localTime": "10:00:00",
+            "localDate": "2024-04-06",
+            "propertyImages": [
+              {
+                "imageID": "abcdef12-3456-7890-abcd-ef1234567890",
+                "imageURL": "image1.jpg"
+              },
+              {
+                "imageID": "34567890-abcd-ef01-2345-6789abcdef012",
+                "imageURL": "image2.jpg"
+              }
+            ],
+            "propertyVideos": [
+              {
+                "videoID": "7890abcd-ef01-2345-6789-abcdef012345",
+                "videoURL": "video1.mp4"
+              }
+            ],
+            "propertyReview": [
+              {
+                "reviewID": "90123456-789a-bcde-f012-3456789abcdef",
+                "userID": "12345678-9abc-def0-1234-56789abcdef0",
+                "comment": "Great property!",
+                "rating": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "userBuilderName": "Jane Doe",
+        "userBuilderEmail": "jane@gmail.com",
+        "userBuilderPassword": "def456",
+        "userBuilderContact": "0987654321",
+        "userBuilderAddress": "456 Main St, City, Country",
+        "typeOfDeals": "Rent",
+        "typeOfResidentialProperties": "House",
+        "typeOfCommercialProperties": "Retail Space",
+        "companyName": "XYZ Realty",
+        "addressOfCompany": "789 Oak St, City, Country",
+        "operatingSince": "2005",
+        "expertiseIn": "Commercial properties",
+        "descriptionOfBusiness": "We specialize in retail and commercial spaces.",
+        "localTime": "11:00 AM",
+        "localDate": "2024-04-07",
+        "userType": "Agent",
+        "propertyRentAndBuys": []
+      }
+    ]
+  }
+  

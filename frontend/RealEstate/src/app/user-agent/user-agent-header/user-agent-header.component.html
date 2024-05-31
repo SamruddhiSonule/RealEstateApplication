@@ -1,0 +1,27 @@
+
+<div class="header">
+       
+    <div class="title">
+       <a class="titlename" routerLink="">gharr Imarat</a>
+    </div>
+
+    <div>
+        <button class="btn btnSell">Sell Your Property</button>
+    </div>
+           
+    <div class="login" >      
+        <button class="btn"><i class="fa fa-caret-down" aria-hidden="true"></i>&nbsp;Hi, {{userAgent.userAgentName}}</button>
+        <div class="dropdownList">
+            <div class="hiddenDiv">
+
+            </div>
+            <div class="dropdown" >
+            <ul>
+                 <li> <a class="signup" (click)="userLogout()">LogOut</a></li>
+            </ul> 
+            </div>
+         </div>
+    </div>
+        
+</div>
+

@@ -1,0 +1,55 @@
+
+    <div class="header">
+       
+        <div class="title">
+           <a class="titlename" routerLink="">gharr Imarat</a>
+        </div>
+        <div class="pune_areas">      
+            <a class=" btn find_in_pune">Pune Localities <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <div class="dropdownList">
+                <div class="hiddenDiv">
+
+                </div>
+                <div class="dropdown_localities" >
+                    <small class="navLink">Popular Localities in Pune</small>
+                <ul *ngFor="let locality of localitiesInPune">
+                     <li><a class="locality_Options"(click)="selectedLocality(locality)">{{locality}}</a></li>
+                </ul> 
+                </div>
+             </div>
+        </div>
+                    <div class="login" [hidden]="service.loggedOut">           
+                        <button class="btn">Login </button>
+                        <div class="dropdownList">
+                            <div class="hiddenDiv">
+                            </div>
+                            <div class="dropdown" >
+                            <ul>
+                                 <li><Button class="btn loginbtn"  (click)="nevigateToLogin()">Login </Button></li>
+                                 <li>New to gharr Imarat? <a class="signup" (click)="navigateToSignUp()">Signup</a></li>
+                            </ul> 
+                            </div>
+                         </div>
+                    </div>      
+                    <div class="loggedin" [hidden]="service.loggedIn" >      
+                        <button class="btn loggedIn"><i class="fa fa-caret-down" aria-hidden="true"></i>&nbsp;Hi,{{user?.userAgentName}}{{user?.userBuyerName}}</button>
+                        <div class="dropdownList">
+                            <div class="hiddenDiv">
+        
+                            </div>
+                            <div class="dropdown" >
+                            <ul>
+                                 <li><a class="myprofile-link"  (click)="nevigateToProfile()">My Profile </a></li>
+                                 <li> <a class="signup" (click)="userLogout()">LogOut</a></li>
+                            </ul> 
+                            </div>
+                         </div>
+                    </div>
+                    <div class="sellYourPrope">
+                        <button class="btn btnSell" *ngIf="sellYourProperty" (click)="navigateToAddProperty()" >Sell Your Property</button>
+                    </div> 
+                
+                
+            
+    </div>
+

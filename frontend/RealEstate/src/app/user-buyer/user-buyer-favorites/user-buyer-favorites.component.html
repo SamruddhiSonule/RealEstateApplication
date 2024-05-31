@@ -1,0 +1,86 @@
+<div class="view-prop-container">
+    <div>
+        <small class="smalls">Your Properties List..</small>
+    </div>
+    <div class="property-choice">
+        <button class="btn type" (click)="showPropertyForm('RB')" [ngClass]="{'typeSelect':resultPGshow}">Resedential Property/MultiStorey Appartments</button>
+    </div>
+    
+<div class="hideRBandPG" *ngIf="hideResultsRBPG">
+    <div class="resultRB" [hidden]="resultRBshow">
+        <button class="btn prop-btn" *ngFor="let p of propertiesRentAndBuy">
+            <div class="main-box-botn" >
+                <div class="images" >
+                        <img [src]="'data:image;base64,'+p.propertyImages[currentImageIndex]?.image" alt="image">
+                </div>
+                <div class="main-data-price">
+                    <div class="data">
+                            <div class="name">
+                                <div class="cont">
+                                       <div class="nmDiv">
+                                        <small class="nm">{{p.flatBHK}} Flat for {{p.forSaleOrRentString}} in {{p.propertyLocality}}, Pune</small> 
+                                       </div>
+                                     <!-- <div>
+                                        <a class="favorite" #fav (click)="onFavorite()"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                     </div> -->
+                                </div>
+                                
+                            </div>
+                            <div class="societNM">
+                                <small class="society">{{p.societyName}}</small> 
+                            </div>
+                            <div class="dataC">
+                                <div class="details">
+                                        <div class="first-row">
+                                            <div class="area">
+                                                <small id="label">CARPET AREA</small>
+                                                <small id="value">{{p.carpetArea}} sqft</small>
+                                            </div>
+                                            
+                                            <div class="area2">
+                                                <small id="label">CONSTRUCTION PHASE</small>
+                                                <small id="value">{{p.constructionPhase}}</small>
+                                            </div>
+                                            <div class="area2">
+                                                <small id="label">FURNISHING</small>
+                                                <small id="value">{{p.furnishing}}</small>
+                                            </div>
+                                            <div class="area2">
+                                                <small id="label">SOCIETY</small>
+                                                <small id="value">{{p.societyName}}</small>
+                                            </div>
+                                        </div>
+                                </div>
+                                 <div class="descript">
+                                    <div class="info-disc">
+                                        <small class="desc"  [ngClass]="{'hidden': showMore}">
+                                           {{p.description}}
+                                        </small>
+                                    </div>
+                                    
+                                    <div class="dropInfo">
+                                        <a (click)="toggleDescription()">
+                                            <i class="fa fa-sort-asc" aria-hidden="true" *ngIf="!showMore"></i>
+                                            <i class="fa fa-sort-desc" aria-hidden="true" *ngIf="showMore"></i>
+                                        </a>
+                                    </div>
+                                 </div>
+                            </div>
+                    </div>
+                    <div class="price">
+                        <div class="priceRS">
+                            <button class="btn buttonPrice">Get Info</button>
+                        </div>
+                        
+                        <div class="priceRS">
+                            <small class="rs">&#x20B9; {{formatPrice(p.price)}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </button>
+    </div>
+</div>
+
+</div>

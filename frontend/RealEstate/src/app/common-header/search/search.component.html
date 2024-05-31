@@ -1,0 +1,69 @@
+<div class="backGround_design">
+    <div class="headingMain">
+        <small class="heading">Welcome to Gharr Imarat ! <br> Search for Your Dream Property</small>
+    
+        <small>search for buying flats, rental flats pg ....... </small>
+    </div>
+
+    <div class="search_container">
+        <div class="filters">
+                <a class="btn filter_btn" [ngClass]="{'clicked': isClicked[0]}" (click)="isFilterClickedBTN(0,'Buy')">Buy</a>
+                <a class="btn filter_btn" [ngClass]="{'clicked': isClicked[1]}" (click)="isFilterClickedBTN(1,'Rent')">Rent</a>
+                <a class="btn filter_btn" [ngClass]="{'clicked': isClicked[2]}" (click)="isFilterClickedBTN(2,'PG')">PG</a>
+                <!-- <a class="btn filter_btn" [ngClass]="{'clicked': isClicked[3]}" (click)="isFilterClickedBTN(3,'Plot')">Plot</a>
+                <a class="btn filter_btn" [ngClass]="{'clicked': isClicked[4]}" (click)="isFilterClickedBTN(4,'Commercial')" routerLink="commercial">Commercial</a>   -->
+                <!-- <div class="line">
+
+                </div> -->
+        </div>
+        
+        <div class="search_bar">
+        <!-- <div class="flat_input">
+            <select class="flat_input" >
+              <option>Pune</option>
+              <option>Kothrud</option>
+              <option>Hinjawadi</option>
+              <option>Pimpri Chinchwad</option>
+              <option>Katraj</option>
+              
+            </select>
+          </div> -->
+       <div class="search">
+            <div class="searchInput">
+                      <input class="location_input" type="text" placeholder="    Location In Pune                                      |" [(ngModel)]="searchedLocation" (ngModelChange)="filterLocalities()">
+            </div>
+      
+       </div>
+       <div class="search-dropsown" [hidden]="seachBoxShow">
+        <ul>
+          <li *ngFor="let locality of filteredlocation "><a class="selectLocality" (click)="selectedSearchedLocality(locality)">{{locality}}</a></li>
+        </ul>
+      </div>
+      <div class="error">
+        <small class="flatError">{{errorSearch}}&nbsp;{{erroSearchMsgflat}}</small>
+      </div>
+        <div class="flat_input">
+          <select class="flat_input" [(ngModel)]="selectedBHK" name="bhk">
+            
+            <option *ngFor="let bhk of toggleArray1"  [value]="bhk.value">{{bhk.label}}</option>
+          </select>
+        </div>
+        <!-- <input class="flat_input" type="text" placeholder="  Flat BHK                                       |"> -->
+        <div class="budget_input">
+            <div class="devide_Prices">
+            <select class="flat_input" [(ngModel)]="selectedBudget"> 
+                
+                <ng-container *ngFor="let budget of toggleArray2;">
+                  <ng-container > 
+                      <option [value]="budget.value">{{budget.label}}</option>
+                  </ng-container>
+                </ng-container>
+                    <!-- <option *ngFor="let budget of toggleArray2" [value]="budget.value">{{budget.label}}</option> -->
+            </select>
+        </div>
+        </div>
+        <button class="btn btn_search" (click)="navigateToViewProperties()">Search</button>
+    </div>    
+    </div>
+    
+</div>

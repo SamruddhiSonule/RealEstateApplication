@@ -1,0 +1,188 @@
+.container_header{
+    display: flex;
+    margin-bottom: 0px;
+}
+.header{
+    background-color: #FCDC2A;
+    height: 60px;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 200px;
+    margin-bottom: 0px;
+    box-shadow: 0 0 10px rgb(255, 217, 0);
+   
+}
+.fa fa-caret-down{
+    margin-left:3px ;
+}
+.title{
+    margin-left: 30px;
+}
+h5{
+   color: white;
+   font-size: 30px;
+}
+.login{
+    margin-left: 0px;
+    margin-right: 200px;
+    margin-top: 15px;
+}
+.pune_areas{
+    margin-left: 0px;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+.btn{
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    position: relative; 
+}
+.pune_areas{
+    margin-left: 20px;
+}
+.find_in_pune{
+    color: rgb(12, 79, 141);
+    background-color: #FCDC2A;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    position: relative; 
+    width: 180px;
+}
+
+.titlename {
+    text-decoration: none;
+    color: rgb(70, 60, 27);
+    font-size: 23px;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgb(165, 109, 37), rgb(70, 60, 27));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+}
+
+
+.signup{
+    text-decoration: none;
+    color:#B67352;
+    font-size: 15px;
+    cursor: pointer;
+}
+.signup:hover{
+    color: #644535;
+}
+.loginbtn{
+    background-color: #F6995C;
+    border-radius: 20px;
+    height: 35px;
+    font-size: 15px;
+    
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 250px;
+    margin-left: 0px;
+    float: right;
+    margin-right: 70px;
+    box-shadow: 0 0 10px rgb(194, 194, 194);
+    
+}
+.dropdown_localities{
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 250px;
+    margin-left: 0px;
+    float: right;
+    margin-right: 70px;
+    box-shadow: 0 0 10px rgb(194, 194, 194);
+}
+.login:hover{
+    -webkit-transform: 4s;
+}
+.login:hover .dropdown {
+
+    display: block;
+    
+}
+.pune_areas:hover{
+    -webkit-transform: 4s;
+}
+.pune_areas:hover .dropdown_localities {
+
+    display: block;
+    
+}
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+.dropdown_localities ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+.btn:hover{
+    background-color: #e9e8e8;
+}
+.hiddenDiv{
+    
+    background-color: #e9e8e800;
+    height: 15px;
+}
+.btnSell{
+    background-color: #fffb00;
+    margin-right: 0;
+    margin-left:1000px;
+    width: 160px;
+    height: 34px;
+    font-size: 15px;
+    padding: 5px;
+    
+}
+.image{
+    margin-left: 20px;
+    
+}
+img{
+    width: 100px;
+}
+.navLink{
+    font-size: 15px;
+}
+.locality_Options{
+    font-size: 12px;
+    text-decoration: none;
+    color: #644535;
+    cursor: pointer;
+}
+.locality_Options:hover{
+    text-shadow: 0 0 1.5px;
+}
+.profile{
+    margin-right: 300px;
+    display: flex;
+}
+.name{
+    margin-left: 20px;
+}

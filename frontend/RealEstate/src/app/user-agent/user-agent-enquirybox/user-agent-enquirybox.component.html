@@ -1,0 +1,65 @@
+<!-- <div class="main-container">
+        <div class="eheading">
+            <small class="ehead">All Enquiries You Have get...</small>
+        </div>
+        <div class="enquiries">
+            <div class="enquiry1">
+                
+
+                <div class="enquiryMsg" *ngFor="let e of enquiryBox">
+                    <div>
+                        <small class="label">Person EmailID: <small class="value">&nbsp;{{e.personMail}}</small> </small>
+                    </div>
+                    <div>
+                        <small class="label">Name Of Person: <small class="value">&nbsp;{{e.nameOfPerson}}</small> </small>
+                    </div>
+                    <div>
+                        <small class="label">Property Locatilty: <small class="value">&nbsp;{{e.propertyLocatilty}}</small> </small>
+                    </div>
+                    <div>
+                    <div class="enqBOx">
+                        <div class="enqlabel">
+                            <small class="label">Enquiry Message: </small>
+                           </div>
+                            <div>
+                            <small class="value">&nbsp;{{e.enquiryMessage}}</small>
+                            </div>
+                       </div>
+                    <div>
+                        <small class="label">Property Locatilty: <small class="value">&nbsp;{{e.location}}</small> </small>
+                    </div>
+                    </div>
+                      
+                </div>
+            </div>
+        </div>
+</div> -->
+
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>Person EmailID</th>
+                <th>Name Of Person</th>
+                <th>Property Locatilty</th>
+                <th  style="width: 150px;">Enquiry Message</th>
+                <th>Location</th>
+                <th>Local Date</th>
+                <th colspan="2">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+            <tr *ngFor="let e of enquiryBox">
+                <td>{{e.personMail}}</td>
+                <td>{{e.nameOfPerson}}</td>
+                <td>{{e.propertyLocatilty}}</td>
+                <td style="width: 150px;">{{e.enquiryMessage}}</td>
+                <td>{{e.location}}</td>
+                <td>{{e.localDate}}</td>
+                <td><button class="btn pending" [ngClass]="{'closed':e.status!='Pending'}" (click)="closeRequest('Pending',e.enquiryBoxID)">Pending</button></td>
+                <td><button class="btn closed" (click)="closeRequest('Closed',e.enquiryBoxID)" [ngClass]="{'pendingClose':e.status=='Closed'}">Closed</button></td>
+            </tr>
+        
+    </tbody>
+</table>

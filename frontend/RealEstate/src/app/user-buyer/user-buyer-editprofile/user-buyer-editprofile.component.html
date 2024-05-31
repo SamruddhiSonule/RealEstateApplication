@@ -1,0 +1,35 @@
+<Div class="main-container">
+  <div class="heading">
+      <small class="edit-text">Edit Your Profile</small>
+
+  </div>
+    <div class="form">
+        <form [formGroup]="userEdit" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for=""></label>
+              <input type="text"
+                class="form-control" aria-describedby="helpId" formControlName="userBuyerName">
+              <small id="helpId" class="form-text text-muted">Name</small>
+            </div>
+            <div class="form-group">
+                <input type="text"
+                  class="form-control" aria-describedby="helpId" formControlName="userBuyerEmail">
+                <small id="helpId" class="form-text text-muted">Email</small>
+            </div>
+            <div class="form-group">
+                <input type="text"
+                  class="form-control" aria-describedby="helpId" formControlName="userBuyerPassword">
+                <small id="helpId" class="form-text text-muted">Email</small>
+            </div>
+            <div class="form-group">
+                <input type="text"
+                  class="form-control" aria-describedby="helpId" formControlName="userBuyerContact">
+                <small id="helpId" class="form-text text-muted">Mobile Number</small>
+            </div>
+            <div class="boton">
+                <button type="submit" class="btn submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+</Div>
